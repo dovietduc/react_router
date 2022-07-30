@@ -1,12 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from './components/Home';
+import News from './components/News';
+import Contact from './components/Contact';
+import About from './components/About';
+import Route from './components/routes/Route';
 
 function App() {
     return (
         <div className="App">
             <div>
                 <nav>
-                    <ul class="menu container">
+                    <ul className="menu container">
                         <li>
                             <a href="/home">Home</a>
                         </li>
@@ -22,8 +27,20 @@ function App() {
                     </ul>
                 </nav>
 
-                <div class="container">
-                    <h3>Home page</h3>
+                <div className="container">
+
+					<Route path="/home" element={<Home />} />
+					{/* Route({path: '/home', element: <Home />}) */}
+
+					<Route path="/news" element={<News />} />
+					{/* Route({path: '/news', element: <News />}) */}
+
+					<Route path="/contact" element={<Contact />} />
+					{/* Route({path: '/contact', element: <Contact />}) */}
+
+					<Route path="/about" element={<About />} />
+					{/* Route({path: '/about', element: <About />}) */}
+
                 </div>
             </div>
         </div>
