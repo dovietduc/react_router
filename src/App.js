@@ -5,6 +5,7 @@ import News from './components/News';
 import Contact from './components/Contact';
 import About from './components/About';
 import Route from './components/routes/Route';
+import Link from './components/routes/Link';
 
 function App() {
     return (
@@ -13,16 +14,24 @@ function App() {
                 <nav>
                     <ul className="menu container">
                         <li>
-                            <a href="/home">Home</a>
+							<Link to="/home">
+								Home
+							</Link>
                         </li>
                         <li>
-                            <a href="/news">News</a>
+							<Link to="/news">
+								News
+							</Link>
                         </li>
                         <li>
-                            <a href="/contact">Contact</a>
+							<Link to="/contact">
+								Contact
+							</Link>
                         </li>
                         <li>
-                            <a href="/about">About</a>
+							<Link to="/about">
+								About
+							</Link>
                         </li>
                     </ul>
                 </nav>
