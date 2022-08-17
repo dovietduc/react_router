@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {RouterContext} from './Routes';
 
 function Route(props) {
 
-    const pathName = window.location.pathname;
+    const RouterContextStore = useContext(RouterContext);
+
+    const pathName = RouterContextStore.location.pathname;
 
     if(pathName === props.path) {
         return props.element;

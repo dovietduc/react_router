@@ -6,6 +6,7 @@ import Contact from './components/Contact';
 import About from './components/About';
 import Route from './components/routes/Route';
 import Link from './components/routes/Link';
+import Routes from './components/routes/Routes';
 
 // khi click component link -> component appp re-render
 
@@ -48,17 +49,21 @@ function App() {
 
                 <div className="container">
 
-					<Route path="/home" element={<Home />} />
-					{/* Route({path: '/home', element: <Home />}) */}
+                    <Routes>
+                        <Route path="/home" element={<Home />} />
+                        {/* Route({path: '/home', element: <Home />}) */}
 
-					<Route path="/news" element={<News />} />
-					{/* Route({path: '/news', element: <News />}) */}
+                        <Route path="/news" element={<News />} />
+                        {/* Route({path: '/news', element: <News />}) */}
 
-					<Route path="/contact" element={<Contact />} />
-					{/* Route({path: '/contact', element: <Contact />}) */}
+                        <Route path="/contact" element={<Contact />} />
+                        {/* Route({path: '/contact', element: <Contact />}) */}
 
-					<Route path="/about" element={<About />} />
-					{/* Route({path: '/about', element: <About />}) */}
+                        <Route path="/about" element={<About />} />
+                        {/* Route({path: '/about', element: <About />}) */}
+                    </Routes>
+
+				
 
                 </div>
             </div>
